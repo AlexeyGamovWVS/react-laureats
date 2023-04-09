@@ -10,9 +10,13 @@ export function HomePage() {
 
   const onClick = () => {
     const initialBreadcrumb = [
-      { path: "react-laureats", url: "/react-laureats", title: "Home" },
+      {
+        path: "/react-laureats",
+        url: "/react-laureats",
+        title: "Home",
+      },
     ];
-    navigate("/list", { state: initialBreadcrumb });
+    navigate("list", { state: initialBreadcrumb });
   };
 
   return (

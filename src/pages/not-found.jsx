@@ -17,7 +17,7 @@ export function NotFound404() {
           <br />
           <p>
             check the address or try{" "}
-            <Link to="/" className={styles.link}>
+            <Link to="/react-laureats" className={styles.link}>
               homepage
             </Link>
           </p>

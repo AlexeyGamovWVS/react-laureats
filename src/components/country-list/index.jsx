@@ -9,11 +9,7 @@ export const CountryList = ({ countries }) => {
     <ul>
       {countries.map(({ name, code, count }, index) => (
         <li key={index}>
-          <Link
-            to={`/list/${code}`}
-            state={state}
-            className={styles.link}
-          >
+          <Link to={`${code}`} state={state} className={styles.link}>
             <div className={styles.country}>
               <div className={styles.info}>
                 <span>{name}</span>
