@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import * as React from "react";
+import { Link, useLocation } from "react-router-dom";
 
-import styles from './laureate-list.module.css';
+import styles from "./laureate-list.module.css";
 
-import Avatar from '../avatar';
-import { Prizes } from './prizes';
+import Avatar from "../avatar";
+import { Prizes } from "./prizes";
 
 const LaureateList = ({ laureates }) => {
   const { state } = useLocation();
@@ -14,7 +14,11 @@ const LaureateList = ({ laureates }) => {
       {laureates.map(({ id, firstname, surname, prizes }) => (
         <li key={id}>
           <Link to={`${id}`} state={state} className={styles.link}>
-            <Avatar firstname={firstname} surname={surname} className={styles.avatar} />
+            <Avatar
+              firstname={firstname}
+              surname={surname}
+              className={styles.avatar}
+            />
             <div>
               <h3>
                 {firstname} {surname}

@@ -1,7 +1,7 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback } from "react";
 
 export function useClickOutside(subject, callback) {
-  const getElement = elementOrRef => {
+  const getElement = (elementOrRef) => {
     if (elementOrRef instanceof Element) {
       return elementOrRef;
     }
@@ -10,7 +10,7 @@ export function useClickOutside(subject, callback) {
   };
 
   const handleClick = useCallback(
-    event => {
+    (event) => {
       const element = subject && getElement(subject);
 
       if (element && !element.contains(event.target)) {
@@ -20,14 +20,11 @@ export function useClickOutside(subject, callback) {
     [callback, subject]
   );
 
-  useEffect(
-    () => {
-      document.addEventListener('mousedown', handleClick);
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick);
 
-      return () => {
-        document.removeEventListener('mousedown', handleClick);
-      };
-    },
-    [subject, callback, handleClick]
-  );
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, [subject, callback, handleClick]);
 }

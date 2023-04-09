@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react';
-import cn from 'classnames';
+import React, { useState, useRef } from "react";
+import cn from "classnames";
 
-import dropdown from '../../images/dropdown.svg';
+import dropdown from "../../images/dropdown.svg";
 
-import styles from './dropdown.module.css';
+import styles from "./dropdown.module.css";
 
-import { useClickOutside } from '../../services/dom';
+import { useClickOutside } from "../../services/dom";
 
 const Dropdown = ({ label, options, handleOnSelect, selected }) => {
   const menuRef = useRef();
@@ -19,7 +19,7 @@ const Dropdown = ({ label, options, handleOnSelect, selected }) => {
     setIsOpen(!isOpen);
   };
 
-  const selectItem = value => {
+  const selectItem = (value) => {
     setIsOpen(false);
     handleOnSelect(value);
   };
@@ -32,14 +32,16 @@ const Dropdown = ({ label, options, handleOnSelect, selected }) => {
         </p>
         <img src={dropdown} alt="dropdown" />
       </div>
-      <div className={cn(styles.menu, { [styles.menu__open]: isOpen })}>
-        <ul className={styles.scroll_area} >
-          {options.map(value => (
+      <div
+        className={cn(styles.menu, { [styles.menu__open]: isOpen })}
+      >
+        <ul className={styles.scroll_area}>
+          {options.map((value) => (
             <li
               key={value}
               onClick={() => selectItem(value)}
               className={cn(styles.option, {
-                [styles.option__selected]: value === selected
+                [styles.option__selected]: value === selected,
               })}
             >
               {value}

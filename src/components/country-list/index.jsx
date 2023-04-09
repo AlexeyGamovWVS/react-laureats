@@ -1,7 +1,7 @@
-import * as React from 'react';
-import {Link, useLocation} from 'react-router-dom';
-import styles from './country.module.css';
-import arrow from '../../images/arrow.svg';
+import * as React from "react";
+import { Link, useLocation } from "react-router-dom";
+import styles from "./country.module.css";
+import arrow from "../../images/arrow.svg";
 
 export const CountryList = ({ countries }) => {
   const { state } = useLocation();

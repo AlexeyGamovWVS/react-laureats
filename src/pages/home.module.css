@@ -10,7 +10,7 @@
 
 .container {
   padding: var(--container-padding);
-  height: calc(100vh - var(--container-padding)*2);
+  height: calc(100vh - var(--container-padding) * 2);
   display: flex;
   justify-content: space-between;
   flex-direction: column;

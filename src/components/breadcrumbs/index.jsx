@@ -1,17 +1,20 @@
-import * as React from 'react';
-import {useLocation, useNavigate} from 'react-router-dom';
+import * as React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-import styles from './breadcrumbs.module.css';
+import styles from "./breadcrumbs.module.css";
 
-import { removeRemainingCrumbs } from '../../services/breadcrumbs';
+import { removeRemainingCrumbs } from "../../services/breadcrumbs";
 
 const Crumb = ({ url, title, path }) => {
   const navigate = useNavigate();
   const { state, pathname } = useLocation();
 
-  const routeTo = event => {
+  const routeTo = (event) => {
     event.preventDefault();
-    navigate(path, { replace: true, state: removeRemainingCrumbs(state, url) });
+    navigate(path, {
+      replace: true,
+      state: removeRemainingCrumbs(state, url),
+    });
   };
 
   return (
@@ -35,7 +38,7 @@ const Breadcrumbs = () => {
   if (state) {
     return (
       <nav>
-        {state.map(crumb => (
+        {state.map((crumb) => (
           <Crumb {...crumb} key={crumb.url} />
         ))}
       </nav>

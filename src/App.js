@@ -5,10 +5,10 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/list" element={<ListPage />} />
-        <Route path="/list/:country" element={<CountryPage />} />
-        <Route path="/list/:country/:personId" element={<PersonPage />} />
+        <Route path="/react-laureats" element={<HomePage />} />
+        <Route path="/react-laureats/list" element={<ListPage />} />
+        <Route path="/react-laureats/list/:country" element={<CountryPage />} />
+        <Route path="/react-laureats/list/:country/:personId" element={<PersonPage />} />
         <Route path="*" element={<NotFound404 />} />
       </Routes>
     </BrowserRouter>
