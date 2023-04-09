@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-laureats/static/css/main.ef83ba25.css",
+    "main.js": "/react-laureats/static/js/main.7759f32f.js",
+    "static/media/login-bg.svg": "/react-laureats/static/media/login-bg.826af5d6a36d76bb27ab.svg",
+    "static/media/person-bg.svg": "/react-laureats/static/media/person-bg.3edec9da7a0eb39c9fef.svg",
+    "index.html": "/react-laureats/index.html",
+    "static/media/arrow.svg": "/react-laureats/static/media/arrow.68ebe8d0b7ad82d6725332e8669d8673.svg",
+    "static/media/dropdown.svg": "/react-laureats/static/media/dropdown.7788fe54370d28e308487bd14fc41065.svg",
+    "static/media/sorting.svg": "/react-laureats/static/media/sorting.a77f0e0f05d6f751b693e19bf4cdd318.svg",
+    "main.ef83ba25.css.map": "/react-laureats/static/css/main.ef83ba25.css.map",
+    "main.7759f32f.js.map": "/react-laureats/static/js/main.7759f32f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef83ba25.css",
+    "static/js/main.7759f32f.js"
+  ]
+}
